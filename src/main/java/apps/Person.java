@@ -1,11 +1,11 @@
 package apps;
 
-public class Greeting {
+public class Person {
 
     private final long id;
     private final String content;
 
-    public Greeting(long id, String content) {
+    public Person(long id, String content) {
         this.id = id;
         this.content = content;
     }

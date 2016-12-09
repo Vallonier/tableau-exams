@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class GreetingController {
+public class PersonController {
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
-    @RequestMapping("/greetings")
-    public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
-        return new Greeting(counter.incrementAndGet(),
+    @RequestMapping("/person")
+    public Person greeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return new Person(counter.incrementAndGet(),
                 String.format(template, name));
     }
 }
